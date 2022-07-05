@@ -12,3 +12,5 @@ graveyard/
 /Alienhack/Alienhack/*
 !Alienhack.vcproj
 !Alienhack.vcxproj
+
+*.d
