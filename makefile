@@ -41,5 +41,8 @@ include $(OBJ:.o=.d)
 %.d: %.cpp
 	./depend.sh ‘dirname $*.cpp‘ $(CFLAGS) $*.cpp > $@
 
+clean:
+	rm -f $(OBJ)
+
 depclean:
 	rm -f $(DEP)
