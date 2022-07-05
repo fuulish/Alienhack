@@ -3,9 +3,12 @@ MODULES := src/Console \
 	   src/Model \
 	   src/Model/Actions \
 	   src/Model/Objects
+
+INC := -IRL-Shared
 #look for include files in
 # each of the modules
 CXXFLAGS += $(patsubst %,-I%,$(MODULES))
+CXXFLAGS += $(INC)
 
 #extra libraries if required
 LIBS :=
