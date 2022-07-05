@@ -7,7 +7,7 @@
 #include "World-2DTiles/Zone.hpp"
 #include "ConsoleView/KeyMap.hpp"
 #include "Messages/Console/MessageDisplay.hpp"
-#include "assert.hpp"
+#include "Include/assert.hpp"
 
 
 namespace AlienHack

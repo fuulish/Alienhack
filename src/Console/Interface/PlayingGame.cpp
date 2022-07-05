@@ -56,7 +56,7 @@
 #include "ActionEngine/ActionEngine.hpp"
 #include "Input/IFunctionMap.hpp"
 #include "ConsoleView/KeyPress.hpp"
-#include "assert.hpp"
+#include "Include/assert.hpp"
 #include <boost/foreach.hpp>
 #include <boost/lexical_cast.hpp>
 #include <stdlib.h>

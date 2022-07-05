@@ -24,7 +24,7 @@
 #include "Messages/UserMessageWindow.hpp"
 #include "Console/Console.hpp"
 #include "Algorithm/Algorithms-2D.hpp"
-#include "assert.hpp"
+#include "Include/assert.hpp"
 #include <boost/foreach.hpp>
 #include <boost/format.hpp>
 #include <boost/lexical_cast.hpp>

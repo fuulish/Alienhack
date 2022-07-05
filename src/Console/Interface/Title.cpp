@@ -6,7 +6,7 @@
 #include "../../Model/AHGameModel.hpp"
 #include "../../Model/save.hpp"
 #include "ConsoleView/KeyMap.hpp"
-#include "assert.hpp"
+#include "Include/assert.hpp"
 #include "../../Model/version.hpp"
 #include <string>
 

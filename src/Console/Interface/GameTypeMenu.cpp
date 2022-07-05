@@ -2,7 +2,7 @@
 #include "../../Model/AHGameModel.hpp"
 #include "Input/IFunctionMap.hpp"
 #include "Console/Console.hpp"
-#include "assert.hpp"
+#include "Include/assert.hpp"
 
 
 namespace AlienHack

@@ -1,7 +1,7 @@
 #include "StoryText.hpp"
 #include "draw.hpp"
 #include "Console/Console.hpp"
-#include "assert.hpp"
+#include "Include/assert.hpp"
 #include <boost/foreach.hpp>
 #include <ctime>
 
