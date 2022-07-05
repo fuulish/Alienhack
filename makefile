@@ -1,4 +1,5 @@
-MODULES := src/Console \
+MODULES := RL-Shared \
+	   src/Console \
 	   src/Console/Interface \
 	   src/Model \
 	   src/Model/Actions \
