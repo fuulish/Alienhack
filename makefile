@@ -21,6 +21,8 @@ SRC :=
 # each module
 include $(patsubst %,%/module.mk,$(MODULES))
 
+DEP := $(patsubst %.cpp,%.d,$(SRC))
+
 #determine the object files
 OBJ := $(patsubst %.cpp,%.o,$(filter %.cpp,$(SRC)))
 
@@ -38,3 +40,6 @@ include $(OBJ:.o=.d)
 # dependencies
 %.d: %.cpp
 	./depend.sh ‘dirname $*.cpp‘ $(CFLAGS) $*.cpp > $@
+
+depclean:
+	rm -f $(DEP)
