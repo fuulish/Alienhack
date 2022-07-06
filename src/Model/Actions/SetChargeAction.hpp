@@ -5,6 +5,9 @@
 #include "ActionEngine/ActionEngine.hpp"
 #include "WorldObjects/WorldObject.hpp"
 
+#include <boost/serialization/serialization.hpp>
+#include <boost/serialization/base_object.hpp>
+
 
 namespace AlienHack
 {
