@@ -610,7 +610,7 @@ void drawLargeObject(
 		class NoStop : public ISampleCellFunctor
 		{
 		public:
-			virtual bool operator()(int x, int y)
+			virtual bool operator()(int x, int y) const
 			{
 				return false;
 			}
@@ -625,7 +625,7 @@ void drawLargeObject(
 				: m_console(console), m_x_low(x_low), m_y_low(y_low), m_x_high(x_high), m_y_high(y_high), m_draw(draw)
 			{
 			}
-			virtual void operator()(int x, int y)
+			virtual void operator()(int x, int y) const
 			{
 				if ((x >= m_x_low) && (x <= m_x_high) && (y >= m_y_low) && (y <= m_y_high))
 					m_console.draw(x, y, m_draw.chr, m_draw.fore, m_draw.back);
