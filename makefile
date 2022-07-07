@@ -1,4 +1,14 @@
-MODULES := RL-Shared \
+MODULES := RL-Shared/ActionEngine \
+           RL-Shared/Algorithm \
+           RL-Shared/Console \
+           RL-Shared/ConsoleView \
+           RL-Shared/Game \
+           RL-Shared/Interface \
+           RL-Shared/Messages/Console \
+           RL-Shared/Messages \
+           RL-Shared/World-2DTiles/BSPMapGeneration \
+           RL-Shared/World-2DTiles \
+           RL-Shared/WorldObjects \
 	   src/Console \
 	   src/Console/Interface \
 	   src/Model \
