@@ -12,7 +12,7 @@
 #include "../Actions/BreakDoorAction.hpp"
 #include "../LoSSampler.hpp"
 #include "../IGameEvents.hpp"
-#include "../Overworld.hpp"
+#include "../OverWorld.hpp"
 #include "World-2DTiles/VisionField.hpp"
 #include "World-2DTiles/World.hpp"
 #include "World-2DTiles/Zone.hpp"
