@@ -14,7 +14,7 @@ namespace AlienHack
 using namespace RL_shared;
 
 
-bool LoSSampler::operator()(int x, int y) 
+bool LoSSampler::operator()(int x, int y) const
 {
 	if (!m_zone.isWithin(x, y))
 		return false;

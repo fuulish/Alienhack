@@ -46,7 +46,7 @@ public:
 		hit_obj( RL_shared::INVALID_KEY ), hit(false)
 	{
 	}
-	virtual bool operator()(int x, int y);
+	virtual bool operator()(int x, int y) const;
 };
 
 
