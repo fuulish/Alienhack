@@ -24,6 +24,8 @@ CXXFLAGS += $(INC)
 #extra libraries if required
 LIBS :=
 
+LDLIBS := -lncurses -ltinfo -lboost_serialization -lboost_filesystem
+
 #each module will add to this
 SRC :=
 
@@ -39,6 +41,7 @@ OBJ := $(patsubst %.cpp,%.o,$(filter %.cpp,$(SRC)))
 #link the program
 
 prog: $(OBJ)
+	$(CXX) $(LDFLAGS) $^ $(LOADLIBES) $(LDLIBS) -o $@
 
 $(OBJ):
 
