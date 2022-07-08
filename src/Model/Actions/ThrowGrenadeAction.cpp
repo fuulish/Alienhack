@@ -79,7 +79,8 @@ bool throwGrenade(AHGameModel& model, PlayerCharacter& player, const WorldObject
 		}
 
 		LoSSampler hit_test(zone, 0, targ_x, targ_z);
-		lineCast(from.x, from.z, targ_x, targ_z, hit_test, VisitCellFunctor());
+		VisitCellFunctor visit_test;
+		lineCast(from.x, from.z, targ_x, targ_z, hit_test, visit_test);
 
 		hit_x = hit_test.hit ? hit_test.last_clear_x : hit_test.finish_x;
 		hit_z = hit_test.hit ? hit_test.last_clear_z : hit_test.finish_z;
