@@ -9,6 +9,7 @@ MODULES := RL-Shared/ActionEngine \
            RL-Shared/World-2DTiles/BSPMapGeneration \
            RL-Shared/World-2DTiles \
            RL-Shared/WorldObjects \
+           RL-Shared/World-2DTiles/permissive-fov \
 	   src/Console \
 	   src/Console/Interface \
 	   src/Model \
