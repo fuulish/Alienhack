@@ -10,11 +10,11 @@ MODULES := RL-Shared/ActionEngine \
            RL-Shared/World-2DTiles \
            RL-Shared/WorldObjects \
            RL-Shared/World-2DTiles/permissive-fov \
-	   src/Console \
-	   src/Console/Interface \
-	   src/Model \
-	   src/Model/Actions \
-	   src/Model/Objects
+           src/Console \
+           src/Console/Interface \
+           src/Model \
+           src/Model/Actions \
+           src/Model/Objects
 
 INC := -IRL-Shared
 #look for include files in
