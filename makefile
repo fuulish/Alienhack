@@ -39,9 +39,11 @@ DEP := $(patsubst %.cpp,%.d,$(SRC))
 #determine the object files
 OBJ := $(patsubst %.cpp,%.o,$(filter %.cpp,$(SRC)))
 
+PROG := prog
+
 #link the program
 
-prog: $(OBJ)
+$(PROG): $(OBJ)
 	$(CXX) $(LDFLAGS) $^ $(LOADLIBES) $(LDLIBS) -o $@
 
 $(OBJ):
@@ -57,6 +59,9 @@ include $(OBJ:.o=.d)
 
 clean:
 	rm -f $(OBJ)
+
+distclean:
+	rm -f $(PROG)
 
 depclean:
 	rm -f $(DEP)
