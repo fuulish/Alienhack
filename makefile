@@ -55,7 +55,7 @@ include $(OBJ:.o=.d)
 #calculate C include
 # dependencies
 %.d: %.cpp
-	./depend.sh ‘dirname $*.cpp‘ $(CFLAGS) $*.cpp > $@
+	./depend.sh 'dirname $*.cpp' $(CFLAGS) $*.cpp > $@
 
 clean:
 	rm -f $(OBJ)
