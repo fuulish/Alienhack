@@ -39,7 +39,7 @@ DEP := $(patsubst %.cpp,%.d,$(SRC))
 #determine the object files
 OBJ := $(patsubst %.cpp,%.o,$(filter %.cpp,$(SRC)))
 
-PROG := prog
+PROG := ahack
 
 #link the program
 
