@@ -26,6 +26,7 @@ int main(void)
 
 		ConsoleView view( game, *ism );
 		view.run();
+		view.cleanup();
 	}
 	catch(std::exception& err)
 	{
