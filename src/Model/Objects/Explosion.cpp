@@ -162,7 +162,8 @@ void makeExplosion(
 							if (!terrain::isPassable(zone.terrainAt(tx, tz)))
 								continue;
 							LoSSampler hit_test(zone, 0, tx, tz);
-							lineCast( hit_loc.x, hit_loc.z, tx, tz, hit_test, VisitCellFunctor() );
+							VisitCellFunctor visit_test;
+							lineCast( hit_loc.x, hit_loc.z, tx, tz, hit_test, visit_test );
 							if ((hit_test.finish_x != tx) || (hit_test.finish_z != tz))
 								continue;
 						}
@@ -220,7 +221,8 @@ void makeExplosion(
 					if (zone.isWithin(tx,tz))
 					{
 						LoSSampler hit_test(zone, 0, tx, tz);
-						lineCast( hit_loc.x, hit_loc.z, tx, tz, hit_test, VisitCellFunctor() );
+						VisitCellFunctor visit_test;
+						lineCast( hit_loc.x, hit_loc.z, tx, tz, hit_test, visit_test );
 						if ((hit_test.finish_x != tx) || (hit_test.finish_z != tz))
 							continue;
 
@@ -252,7 +254,8 @@ void demoBlastDamage(AHGameModel& model, World& world, Zone& zone, int bx, int b
 		if (2 <= (dx*dx)+(dz*dz))
 		{
 			LoSSampler hit_test(zone, 0, tx, tz);
-			lineCast( bx, bz, tx, tz, hit_test, VisitCellFunctor() );
+			VisitCellFunctor visit_test;
+			lineCast( bx, bz, tx, tz, hit_test, visit_test );
 			if ((hit_test.finish_x != tx) || (hit_test.finish_z != tz))
 				return;
 		}

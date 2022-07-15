@@ -410,7 +410,8 @@ bool fireShot(
 		int targ_z = from.z + to_offs_z;
 		GetFirstTarget obj_tester( world );
 		LoSSampler hit_test(zone, &obj_tester, targ_x, targ_z);
-		lineCast( from.x, from.z, targ_x, targ_z, hit_test, VisitCellFunctor() );
+		VisitCellFunctor visit_test;
+		lineCast( from.x, from.z, targ_x, targ_z, hit_test, visit_test );
 
 		if (world.objectExists( obj_tester.foundAlien() ))
 		{
@@ -449,7 +450,8 @@ bool fireShot(
 		weapon_stats.shot_accuracy, weapon_stats.shot_accuracy_falloff, is_single_shot_weapon, is_spread_weapon, 
 		from.x, from.z, orig_targ_x, orig_targ_z );
 	LoSSampler hit_test(zone, &obj_tester, targ_x, targ_z);
-	lineCast( from.x, from.z, targ_x, targ_z, hit_test, VisitCellFunctor() );
+	VisitCellFunctor visit_test;
+	lineCast( from.x, from.z, targ_x, targ_z, hit_test, visit_test );
 
 	int hit_x = hit_test.finish_x;
 	int hit_z = hit_test.finish_z;

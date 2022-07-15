@@ -633,7 +633,8 @@ void drawLargeObject(
 		};
 
 		DrawLine drawfunctor( console, x_low, y_low, x_high, y_high, draw );
-		lineCast(x, y, x+offx, y-offz, NoStop(), drawfunctor);
+		NoStop nostopfunctor;
+		lineCast(x, y, x+offx, y-offz, nostopfunctor, drawfunctor);
 	}
 }
 
