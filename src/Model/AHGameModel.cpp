@@ -9,7 +9,7 @@
 #include "Objects/Alien.hpp"
 #include "Objects/TerrainType.hpp"
 #include "Objects/Furniture.hpp"
-#include "assert.hpp"
+#include "Include/assert.hpp"
 #include <boost/foreach.hpp>
 #include <boost/format.hpp>
 #include <utility>

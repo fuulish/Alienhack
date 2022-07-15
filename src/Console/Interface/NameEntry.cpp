@@ -4,7 +4,7 @@
 #include "../../Model/Objects/PlayerCharacter.hpp"
 #include "World-2DTiles/World.hpp"
 #include "ConsoleView/KeyMap.hpp"
-#include "assert.hpp"
+#include "Include/assert.hpp"
 
 
 namespace AlienHack

@@ -3,7 +3,6 @@
 
 
 #include "AHGameObject.hpp"
-//#include "assert.hpp"
 #include <boost/shared_ptr.hpp>
 
 

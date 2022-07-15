@@ -1,5 +1,5 @@
 #include "WeaponData.hpp"
-#include "assert.hpp"
+#include "Include/assert.hpp"
 
 
 namespace AlienHack

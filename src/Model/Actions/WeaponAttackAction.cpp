@@ -12,7 +12,7 @@
 #include "../IGameEvents.hpp"
 #include "World-2DTiles/Zone.hpp"
 #include "Algorithm/Algorithms-2D.hpp"
-#include "assert.hpp"
+#include "Include/assert.hpp"
 #include <boost/foreach.hpp>
 #include <stdlib.h>
 #include <boost/lexical_cast.hpp>

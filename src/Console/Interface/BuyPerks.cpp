@@ -4,7 +4,7 @@
 #include "../../Model/AHGameModel.hpp"
 #include "Input/IFunctionMap.hpp"
 #include "Console/Console.hpp"
-#include "assert.hpp"
+#include "Include/assert.hpp"
 #include <boost/format.hpp>
 #include <boost/lexical_cast.hpp>
 

@@ -2,7 +2,7 @@
 #include "draw.hpp"
 #include "Console/Console.hpp"
 #include "Input/IFunctionMap.hpp"
-#include "assert.hpp"
+#include "Include/assert.hpp"
 #include <boost/foreach.hpp>
 
 

@@ -3,6 +3,8 @@
 
 
 #include "ActionEngine/ActionEngine.hpp"
+#include <boost/serialization/serialization.hpp>
+#include <boost/serialization/base_object.hpp>
 
 
 namespace AlienHack

@@ -1,7 +1,7 @@
 #include "ChoiceDialog.hpp"
 #include "Input/IFunctionMap.hpp"
 #include "Console/Console.hpp"
-#include "assert.hpp"
+#include "Include/assert.hpp"
 #include <boost/foreach.hpp>
 
 
