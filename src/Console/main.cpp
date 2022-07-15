@@ -11,7 +11,7 @@ using namespace AlienHack;
 using namespace RL_shared;
 
 
-void main(void)
+int main(void)
 {
 	try
 	{
