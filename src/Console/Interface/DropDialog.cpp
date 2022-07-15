@@ -2,7 +2,10 @@
 #include "Input/IFunctionMap.hpp"
 #include "Console/Console.hpp"
 #include "Include/assert.hpp"
+#include "Include/system.hpp"
+#if defined(IS_WINDOWS)
 #include <xutility>
+#endif
 
 
 

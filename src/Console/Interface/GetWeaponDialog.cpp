@@ -1,7 +1,10 @@
 #include "GetWeaponDialog.hpp"
 #include "../../Model/Objects/Weapon.hpp"
 #include "Input/IFunctionMap.hpp"
+#include "Include/system.hpp"
+#if defined(IS_WINDOWS)
 #include <xutility>
+#endif
 
 
 
