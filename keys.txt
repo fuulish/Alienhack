@@ -1,20 +1,20 @@
 
 OK			Enter
 Back			Esc
-Up			Up
-UpAndLeft		UpAndLeft
-Left			Left
-DownAndLeft		DownAndLeft
-Down			Down
-DownAndRight	DownAndRight
-Right			Right
-UpAndRight		UpAndRight
+Up			k
+UpAndLeft		y
+Left			h
+DownAndLeft		b
+Down			j
+DownAndRight	        n
+Right			l
+UpAndRight		u
 ScrollUp		-
 ScrollDown		+
 ScrollDown		=
 
 Help			?
-Look			l
+Look			/
 Save			S
 Char			c
 Buy			$
@@ -26,7 +26,7 @@ Strafe		z
 StrafeLock		Z
 Turn			x
 TurnLock		X
-Get			g
+Get			,
 Operate		Space
 Armour		a
 Sidearm		s
@@ -37,7 +37,7 @@ Fire			f
 Frag			r
 Stun			t
 Inc			i
-Krak			k
+Krak			g
 Medkit		m
-Neutraliser		n
+Neutraliser		v
 Demolition		e
