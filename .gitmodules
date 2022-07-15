@@ -1,0 +1,3 @@
+[submodule "RL-Shared"]
+	path = RL-Shared
+	url = https://github.com/fuulish/RL-Shared.git
