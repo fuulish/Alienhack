@@ -35,7 +35,13 @@ namespace
 Title::Title( boost::weak_ptr< RL_shared::InterfaceStateMachine > ism )
 : InterfaceState(ism), m_done(false)
 {
-	m_key_map.reset( new KeyMapFile("keys.txt") );
+	try {
+		m_key_map.reset( new KeyMapFile("keys.txt") );
+	}
+	catch (std::runtime_error) {
+		m_key_map.reset( new KeyMapFile() );
+	}
+
 	makeBackground();
 }
 
