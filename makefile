@@ -41,12 +41,23 @@ OBJ := $(patsubst %.cpp,%.o,$(filter %.cpp,$(SRC)))
 
 PROG := ahack
 
+ENV := env.out
+
 #link the program
 
-$(PROG): $(OBJ)
-	$(CXX) $(LDFLAGS) $^ $(LOADLIBES) $(LDLIBS) -o $@
+$(PROG): $(OBJ) $(ENV)
+	$(CXX) $(LDFLAGS) $(filter %.o,$^) $(LOADLIBES) $(LDLIBS) -o $@
 
-$(OBJ):
+$(OBJ): $(ENV)
+
+tmp.env: FORCE_REBUILD
+	@env | grep -e ^CXX -e ^LD > $@
+
+FORCE_REBUILD:
+
+$(ENV): tmp.env
+	@test -f $@ || cp $(word 1,$<) $@
+	@diff $@ $(word 1,$<) || cp $(word 1,$<) $@
 
 #include the C include
 # dependencies
@@ -61,7 +72,7 @@ clean:
 	rm -f $(OBJ)
 
 distclean:
-	rm -f $(PROG)
+	rm -f $(PROG) $(ENV)
 
 depclean:
 	rm -f $(DEP)
