@@ -50,14 +50,13 @@ $(PROG): $(OBJ) $(ENV)
 
 $(OBJ): $(ENV)
 
-tmp.env: FORCE_REBUILD
+tmp.env:
 	@env | grep -e ^CXX -e ^LD > $@
 
-FORCE_REBUILD:
-
 $(ENV): tmp.env
-	@test -f $@ || cp $(word 1,$<) $@
-	@diff $@ $(word 1,$<) || cp $(word 1,$<) $@
+	@test -f $@ || cp $< $@
+	@diff $@ $< || cp $< $@
+	@rm $<
 
 #include the C include
 # dependencies
