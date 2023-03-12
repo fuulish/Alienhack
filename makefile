@@ -51,7 +51,7 @@ $(PROG): $(OBJ) $(ENV)
 $(OBJ): $(ENV)
 
 tmp.env:
-	@env | grep -e ^CXX -e ^LD > $@
+	@env | grep -e ^CXX > $@
 
 $(ENV): tmp.env
 	@test -f $@ || cp $< $@
