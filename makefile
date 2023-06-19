@@ -82,7 +82,7 @@ endif
 #calculate C include
 # dependencies
 %.d: %.cpp
-	./depend.sh 'dirname $*.cpp' $(CFLAGS) $*.cpp > $@
+	echo $(shell dirname $@)/$(shell $(CXX) $(CXXFLAGS) -MM -MG "$<") > $@
 
 clean:
 	rm -f $(OBJ)
