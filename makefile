@@ -58,9 +58,10 @@ $(ENV): tmp.env
 	@diff $@ $< || cp $< $@
 	@rm $<
 
-#include the C include
-# dependencies
+#include the C include dependencies (only for non-clean targets)
+ifeq (,$(findstring clean,$(MAKECMDGOALS)))
 include $(OBJ:.o=.d)
+endif
 
 #calculate C include
 # dependencies
