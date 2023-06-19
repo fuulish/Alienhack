@@ -43,8 +43,21 @@ PROG := ahack
 
 ENV := env.out
 
-#link the program
+.PHONY: all release_compile release debug_compile debug
 
+release: release_compile
+
+release_compile: CXXFLAGS += -O2
+release_compile: all
+
+debug: debug_compile
+
+debug_compile: CXXFLAGS += -O0 -g3
+debug_compile: all
+
+all: $(PROG)
+
+#link the program
 $(PROG): $(OBJ) $(ENV)
 	$(CXX) $(LDFLAGS) $(filter %.o,$^) $(LOADLIBES) $(LDLIBS) -o $@
 
