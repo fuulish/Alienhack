@@ -22,6 +22,8 @@ INC := -IRL-Shared
 CXXFLAGS += $(patsubst %,-I%,$(MODULES))
 CXXFLAGS += $(INC)
 
+CXXFLAGS += -std=c++11
+
 #extra libraries if required
 LIBS :=
 
