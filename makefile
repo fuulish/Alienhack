@@ -31,15 +31,20 @@ LDLIBS := -lncurses -lboost_serialization -lboost_filesystem
 
 #each module will add to this
 SRC :=
+DIR :=
 
 #include the description for
 # each module
 include $(patsubst %,%/module.mk,$(MODULES))
 
+BUILD ?= build
+
+OUT := $(patsubst %,$(BUILD)/%,$(DIR))
+
 DEP := $(patsubst %.cpp,%.d,$(SRC))
 
 #determine the object files
-OBJ := $(patsubst %.cpp,%.o,$(filter %.cpp,$(SRC)))
+OBJ := $(patsubst %.cpp,$(BUILD)/%.o,$(filter %.cpp,$(SRC)))
 
 PROG := ahack
 
@@ -59,11 +64,19 @@ debug_compile: all
 
 all: $(PROG)
 
+directories: $(OUT)
+
+$(OUT):
+	@mkdir -p $@
+
 #link the program
 $(PROG): $(OBJ) $(ENV)
 	$(CXX) $(LDFLAGS) $(filter %.o,$^) $(LOADLIBES) $(LDLIBS) -o $@
 
-$(OBJ): $(ENV)
+$(BUILD)/%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c -o $@ $<
+
+$(OBJ): $(ENV) |directories
 
 tmp.env:
 	@env | grep -e ^CXX > $@
@@ -81,7 +94,7 @@ endif
 
 #calculate C include
 # dependencies
-%.d: %.cpp
+$(BUILD)/%.d: %.cpp |directories
 	echo $(shell dirname $@)/$(shell $(CXX) $(CXXFLAGS) -MM -MG "$<") > $@
 
 clean:

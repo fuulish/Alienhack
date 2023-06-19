@@ -23,3 +23,4 @@ SRC += src/Model/Actions/BreakDoorAction.cpp \
        src/Model/Actions/UseTerminalAction.cpp \
        src/Model/Actions/WaitAction.cpp \
        src/Model/Actions/WeaponAttackAction.cpp
+DIR += src/Model/Actions

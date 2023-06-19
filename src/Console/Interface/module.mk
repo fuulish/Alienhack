@@ -19,3 +19,4 @@ SRC += src/Console/Interface/BuyPerks.cpp \
        src/Console/Interface/TargetSelect.cpp \
        src/Console/Interface/Title.cpp \
        src/Console/Interface/ViewFile.cpp
+DIR += src/Console/Interface

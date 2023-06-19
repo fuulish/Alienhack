@@ -18,3 +18,4 @@ SRC += src/Model/Objects/AcidSplashable.cpp \
        src/Model/Objects/Terminal.cpp \
        src/Model/Objects/Weapon.cpp \
        src/Model/Objects/WeaponData.cpp
+DIR += src/Model/Objects
