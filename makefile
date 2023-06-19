@@ -65,6 +65,7 @@ $(OBJ): $(ENV)
 
 tmp.env:
 	@env | grep -e ^CXX > $@
+	@echo "CXXFLAGS=$(CXXFLAGS)" > $@
 
 $(ENV): tmp.env
 	@test -f $@ || cp $< $@
