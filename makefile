@@ -27,7 +27,7 @@ CXXFLAGS += -std=c++11
 #extra libraries if required
 LIBS :=
 
-LDLIBS := -lncurses -ltinfo -lboost_serialization -lboost_filesystem
+LDLIBS := -lncurses -lboost_serialization -lboost_filesystem
 
 #each module will add to this
 SRC :=
