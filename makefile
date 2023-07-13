@@ -79,7 +79,7 @@ $(BUILD)/%.o: %.cpp
 $(OBJ): $(ENV) |directories
 
 tmp.env:
-	@env | grep -e ^CXX > $@
+	@env | grep -e ^CXX > $@ || test $$? -le 1 || (echo "environment detection failed" && false)
 	@echo "CXXFLAGS=$(CXXFLAGS)" > $@
 
 $(ENV): tmp.env
