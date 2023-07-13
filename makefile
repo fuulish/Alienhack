@@ -101,7 +101,7 @@ clean:
 	rm -f $(OBJ)
 
 distclean:
-	rm -f $(PROG) $(ENV)
+	rm -rf $(PROG) $(ENV) $(BUILD)
 
 depclean:
 	rm -f $(DEP)
